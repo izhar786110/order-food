@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: rgba(222, 184, 135, 0.304);
+    width: 500px;
+    padding: 1rem;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.menu h1{
+    text-align: center;
+}
+
+button{
+    height: 2rem;
+    background-color: lightblue;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+button:hover{
+    background-color: #3fe5b3;
+    animation: scaleUp 0.3s ease-in-out forwards;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+.food-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #ada2a2;
+    width: 500px;
+    padding: 1rem 0.5rem;
+    margin: auto;
+    border-radius: 1rem;
+    animation: colorChange 5s infinite;
+}
+@keyframes colorChange {
+    0% {
+        background-color: #ada2a2;
+    }
+    50% {
+        background-color: #c0b6b6;
+    }
+    100% {
+        background-color: #ada2a2;
+    }
+}
+img{
+    width: 35%;
+    animation: bounce 0.5s ease-in-out;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+textarea{
+    width: 100%;
+    height: 80px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.item-div{
+    width: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    animation: slideIn 0.5s ease-in-out;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.detail-div{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.order-id{
+    font-size: 1.5rem;
+    color: orangered;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+@media screen and (max-width:570px) {
+    .item-div{
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .menu, .food-container{
+        width: 95vw;
+    }
+}
